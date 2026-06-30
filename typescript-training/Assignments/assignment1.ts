@@ -20,9 +20,8 @@ let emailAddr: string="john.doe@example.com";
 console.log(`Person's email address: ${emailAddr}`);
 
 //6. Coordinates of a location (latitude, longitude): 37.7749, -122.4194
-let latitude :number= 37.7749;
-let Longitude :number= -122.4194;
-console.log(`Coordinates of a location (latitude, longitude): ${latitude}, ${Longitude}`);
+let latitudeAndLongitude :number[]= [37.7749, -122.4194];
+console.log(`Coordinates of a location (latitude, longitude): ${latitudeAndLongitude[0]}, ${latitudeAndLongitude[1]}`);
 
 //7. Person's marital status: true or false
 let maritalStatus: boolean= true
