@@ -48,3 +48,6 @@ switch(env){
         console.log("default case");
 
 }
+//for..in - in object
+//for..of- in arrays,list
+//do..while
