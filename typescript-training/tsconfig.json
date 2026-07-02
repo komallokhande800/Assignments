@@ -1,6 +1,8 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
+    "noEmit": true, //whenever i want to import file and execute don't create js file
+    "allowImportingTsExtensions": true, //allow all files to import with .ts , don't give any error
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
