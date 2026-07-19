@@ -23,3 +23,4 @@ const [popup] = await Promise.all([
 await popup.waitForLoadState();
 await popup.locator('h1').textContent();
 });
+

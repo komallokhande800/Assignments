@@ -17,3 +17,4 @@ function firstNonRepeating(str:string):string |null{
     return null;
 }
 console.log(firstNonRepeating("swiss"))
+

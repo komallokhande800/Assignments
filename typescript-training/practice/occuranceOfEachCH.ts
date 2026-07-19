@@ -1,14 +1,29 @@
 
 
-function countCharacters(str: string): void {
+// function countCharacters(str: string): void {
 
-    const count: Record<string, number> = {};
+//     const count: Record<string, number> = {};
 
-    for (const ch of str) {
-        count[ch] = (count[ch] || 0) + 1;
-    }
+//     for (const ch of str) {
+//         count[ch] = (count[ch] || 0) + 1;
+//     }
 
-    console.log(count);
+//     console.log(count);
+// }
+
+// countCharacters("programming");
+// ==
+
+
+function occuranceOfEachChar(str:string):void{
+const count: Record<string, number>={};
+for (const ch of str)
+{
+    count[ch]=(count[ch]||0)+1;
+}
+console.log(count)
+
+
 }
 
-countCharacters("programming");
+console.log(occuranceOfEachChar("Automation"));

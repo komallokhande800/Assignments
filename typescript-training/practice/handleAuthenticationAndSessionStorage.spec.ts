@@ -17,4 +17,3 @@ test('reused session storage', async({page})=>
     await page.goto("https://rahulshettyacademy.com/angularpractice/shop");
     await expect(page.locator("a.navbar-brand ").nth(1)).toHaveText("ProtoCommerce Home");
 })
-

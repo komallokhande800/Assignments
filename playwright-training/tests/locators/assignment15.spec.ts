@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+
 test('tools QA', async ({ page }) => {
 
     // 1. Enter URL and Launch the application (https://demoqa.com/automation-practice-form)
@@ -6,7 +7,8 @@ test('tools QA', async ({ page }) => {
 
     // 2. Wait for Page-load
     //await page.waitForLoadState('networkidle');
-
+    const pageHeader = await page.locator('//h1[text()="Practice Form"]');
+    await expect(pageHeader).toBeVisible();
     // 3. Enter First name and Last name
     const firstName = await page.locator("#firstName");
     await firstName.fill("komal")
@@ -39,7 +41,7 @@ test('tools QA', async ({ page }) => {
     await selectHobbies(page, Hobbies);
     // 10.Upload photo
     const chooseFile = await page.locator('//input[@id="uploadPicture"]');
-    const filePath = "files/photo.png";
+    const filePath = "C:/AutomationTraining/playwright-training/tests/files/photo.png";
     await chooseFile.setInputFiles(filePath);
 
     // 11.Submit Details
@@ -47,8 +49,6 @@ test('tools QA', async ({ page }) => {
     const submitt = await page.locator('//button[text()="Submit"]');
     await submitt.click();
 });
-
-
 
 
 async function selectGender(page: any, option: string): Promise<void> {
@@ -83,8 +83,10 @@ async function selectSubject(page: any, options: string[]): Promise<void> {
 }
 
 async function selectHobbies(page: any, options: string[]): Promise<void> {
+
     for (const option of options) {
         const hobby = await page.locator(`//label[text()="${option}"]`);
+
         await hobby.click();
     }
 }
